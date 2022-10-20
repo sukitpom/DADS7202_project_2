@@ -1,4 +1,4 @@
-# Capybarista Group <p> *Object Detection One Peice* </p>
+# Capybarista Group <p> *Object Detection One Piece* </p>
 
 # 1. Overview 
 Data  จำนวน 1182 รูป ประกอบก้วย 9 คลาสดังนี้
