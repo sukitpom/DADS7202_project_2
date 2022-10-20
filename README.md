@@ -40,6 +40,7 @@ Model ที่ใช้ในการทดสอบคือ Yolov5s แล�
 4. Yolov5s Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference
 
 # 2. What is Yolov5?
+The object detection method YOLO, which stands for "You Only Look Once," divide images into a grid structure. In the grid, each cell is in charge of finding objects within of it. Due to its accuracy and speed, YOLO is one of the most well-known object detection algorithms.
 
 # 3. Code Detail
 
