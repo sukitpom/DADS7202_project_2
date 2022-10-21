@@ -34,10 +34,13 @@ Data  จำนวน 1182 รูป ประกอบก้วย 9 คลา�
 
 Model ที่ใช้ในการทดสอบคือ Yolov5s และ Yolov5l
 แบ่งการทดสอบดังนี้
-1. Yolov5l unfreeze model และ ให้ Model ทำการปรับ Weight เอง
-2. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain 
-3. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain  
-4. Yolov5s Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference
+1. Yolov5l unfreeze model และให้ Model ทำการปรับ Weight เอง
+2. Yolov5l unfreeze model และใช้ weight ที่ผ่าน pretrain 
+3. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain 
+4. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และให้ Model ทำการปรับ Weight เอง
+5. Yolov5l Freeze  10 layer แรกและใช้ weight ที่ผ่าน pretrain  
+6. Yolov5s Freeze  10 layer แรกและใช้ weight ที่ผ่าน pretrain  
+
 
 # 2. What is Yolov5?
 The object detection method YOLO, which stands for "You Only Look Once," divide images into a grid structure. In the grid, each cell is in charge of finding objects within of it. Due to its accuracy and speed, YOLO is one of the most well-known object detection algorithms.
@@ -45,6 +48,21 @@ The object detection method YOLO, which stands for "You Only Look Once," divide 
 # 3. Code Detail
 
 # 4. Result
+1. Yolov5l unfreeze และ ปรับ Weightเอง <br>
+<img src="pic/yolov5l_W_False_F_False_PR_curve.png" alt="drawing" align ="center" width ="400">
+
+2. Yolov5l unfreeze model และใช้ weight ที่ผ่าน pretrain  <br>
+<img src="pic/yolov5l_W_True_F_False_PR_curve.png" alt="drawing" align ="center" width ="400">
+
+3. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain  
+<img src="pic/yolov5l_W_True_F_True_PR_curve.png" alt="drawing" align ="center" width ="400">
+
+4. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และให้ Model ทำการปรับ Weight เอง <br>
+<img src="pic/yolov5l_W_False_F_True_PR_curve.png" alt="drawing" align ="center" width ="400">   
+
+5. Yolov5l Freeze  10 layer แรกและใช้ weight ที่ผ่าน pretrain  
+<img src="pic/yolov5l_W_True_F10_True_PR_curve.png" alt="drawing" align ="center" width ="400">   
+
 
 # 5. Summary
 
