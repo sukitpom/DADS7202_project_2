@@ -3,14 +3,18 @@
 by Capybarista Team
 
 # Summary:
-- Model comparison
-   - RoboFlow (Default)
-   - Yolov5l - Weight False Freeze False
-   - Yolov5l - Weight True Freeze False
-   - Yolov5l - Weight False Freeze True
-   - Yolov5l - Weight True Freeze True
-   - Yolov5s - Weight True Freeze True
-- Highlight Data Profiling
+
+- Model comparison with mAP@0.5 score and Running time
+   - RoboFlow (Default) - (0.7)
+   - Yolov5l - Weight False Freeze False (0.709 / 5.36 hr)
+   - Yolov5l - Weight True Freeze False (0.787 / 5.35 hr)
+   - Yolov5l - Weight False Freeze True (0.002 / 2.42 hr)
+   - Yolov5l - Weight True Freeze True (0.066 / 2.43 hr)
+   - Yolov5l - Weight True Freeze 10 (0.673 / 3.22 hr)
+   - Yolov5s - Weight True Freeze True (ยังไม่เสร็จ)
+
+- The Best Model (Highest score) = Yolov5l - Weight True Freeze False (Unfreeze Model + Adjust weight from pre-train result)
+- Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10
 
 RFM model and imbalance data
 ![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/1.%20output.JPG)
