@@ -26,7 +26,7 @@ With this kind of identification and localization, object detection can be used 
 The comparison between image classification, object detection and instance segmentation shown in below.
 
 <p align="center" width="100%">
-    <img width="100%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Picture1.png"> </span>
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Picture1.png"> </span>
 
 from: Standford University 2016 winter lectures CS231n Fei-Fei Li & Andrej Karpathy & Justin Johnson
 
