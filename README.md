@@ -56,7 +56,9 @@ Step of roboflow for One Piece Character Detection Project
 Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
 
 # Outcome:
+- Project Link: https://app.roboflow.com/dl-yjboe/dads7202_hw2/13
 - mAP for Train / Validation / Test of all charactor = 71% / 68% / 70%
+- Observation: Usopp is lowest score --> Usopp have 2 version (wear mask/no mask) but our team label only 1 label
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20score.png"> </span>
