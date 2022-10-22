@@ -43,10 +43,16 @@ Our team do Image augmentation with roboflow (due to time limitation, we set cri
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/augmentation-options.png"> </span>
      
-RFM model and imbalance data
+Step of roboflow for One Piece Character Detection Project
+1. Upload photo to roboflow
+2. Label One Piece Character in all photo.
+3. Image preprocessing & Image augmentation
+4. Train.
 
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/10.jpg)
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20step.png"> </span>
 
+For more detail, visit: https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
 
 Respone type vs K-MEAN result 
 
