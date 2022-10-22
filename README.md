@@ -137,6 +137,13 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
    - Running time: unfreeze layer model  > freeze layer model
    - Score: allow to update weight model  ~ No update weight model
 
+
+# Next step:
+- Add number of photo
+- Use more feature of image augmentation (Cutout, Grayscale, ...)
+- Create standard of Labelling 
+- Comparison to others version of YoloV5 (YoloV5m,  YoloV5x, ...)
+-
 ---------------------------------------------------
 
 # Reference:
@@ -146,22 +153,14 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 ---------------------------------------------------
 
+# Capybarista Team member:
+- ธีรนาถ ศรีงามดี
+- พัชรพฤกษ์ วัฒนางกูร
+- Nattapong Thanngam_6310422089 
+- สุกิจ วาณิชฤดี_6310422092 
+- อร มินเทียร์
 
-
-
-
-
-
-
-# 5. Summary
-จากการทดลองทั้ง 6 โมเดลพบว่าโมเดลที่ให้ค่า mAP@0.5 ดีที่สุดคือ โมเดล 2 ที่ Unfreeze Model และใช้ Weight ที่ผ่าน Pre-train ซึ่งให้ผลลัพธ์ที่ดีกว่า โมเดล 1 ที่ Unfreeze Model และไม่ใช้ Weight ที่ผ่าน Pre-train 
-ซึ่งทั้ง 2 โมเดลนี้ให้ค่า mAP@0.5 ที่แตกต่างกันมาก ในขณะที่ใช้เวลาในการ Train ไม่แตกต่างกันอย่างมีนัยสำคัญ แต่เมื่อพิจารณาโมเดลที่ 5 กับโมเดลที่ 2 พบว่าค่า mAP@0.5 ของโมเดล 5 ให้ผลลัพธ์ไม่ต่างอย่างมีนัยสำคัญกับโมเดลที่ 1 
-แต่กลับใช้เวลาในการ Train ที่น้อยกว่าโมเดลที่ 1 มาก ส่วนโมเดลที่ 3 และ 4 ที่มีการ Freeze ทั้งโมเดลยกเว้น Inference Layer จะให้ผลลัพธ์ที่ไม่เหมาะสม เนื่องการเป็นส่วนของ Head กับ Neck ที่เกี่ยวข้องกับการทำนายผลลัพธ์ 
-ซึ่งไม่ใช่ส่วนของ Feature Extraction จึงทำให้โมเดลไม่มีการเปลี่ยนแปลง Back Propagation ในส่วนของการทำนายผลให้สอดคล้องกับ Dataset ชุดใหม่ 
-
-# 6. Future Work
-- ทำการ unfreeze ในส่วนของ Head และ Neck ตามลำดับเพื่อเปรียบเทียบผลลัพธ์กับการ unfreez พร้อมกัน
-- เปรียบเทียบผลลัพธ์ของโมเดลที่ 1 2 5 กับ yoloV5 ที่เป็น verion s m x ว่าผลลัพธ์จะยังเป็นเหมือนเดิมเหรือไม่
-- เพิ่ม Dataset เพื่อทดสอบดูว่าความแม่นยำเพิ่มขึ้นหรือไม่ 
-
-
+-  
+- 6410414001 
+- 6410412007 
+- 6410412014 
