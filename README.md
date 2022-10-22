@@ -73,15 +73,24 @@ Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-t
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20score.png"> </span>
 
-However, roboflow have some limitation about tuning. Next step, team will use jupyter in colab to adjust weight and freeze.
-
-
-
-
-
-
+However, roboflow have some limitation about tuning. Next step, team will use jupyter in colab to adjust hyperparameter.
 
 ---------------------------------------------------
+
+# Our project in  jupyter-colab
+- Project Link: https://colab.research.google.com/drive/1hfHihyPVFt18axpft3brB-uG-jAQ9OoM?usp=sharing#scrollTo=ii8qC1HDUzZ6
+- 6 Comparison base on batch-size = 16 and 100 epochs (default)
+   - Yolov5l - Weight False Freeze False 
+   - Yolov5l - Weight True Freeze False
+   - Yolov5l - Weight False Freeze True
+   - Yolov5l - Weight True Freeze True 
+   - Yolov5l - Weight True Freeze 10 
+   - Yolov5s - Weight True Freeze True (ยังไม่เสร็จ)
+- Number of photo after image augmentation = 11232
+- Other setting shown in below
+
+
+
 Respone type vs K-MEAN result 
 
 ![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/5.%20KMEAN%20vs%20Respone.JPG)
