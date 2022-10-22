@@ -22,16 +22,16 @@ by Capybarista Team
 
 # Introduction:
 - Object detection: Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. 
-With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, all while accurately labeling them.
-The comparison between image classification, object detection and instance segmentation shown in below.
+With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, 
+all while accurately labeling them. The comparison between image classification, object detection, and instance segmentation is shown below.
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Picture1.png"> </span>
 
 from: Standford University 2016 winter lectures CS231n Fei-Fei Li & Andrej Karpathy & Justin Johnson
 
-- YOLOv5: YOLO an acronym for 'You only look once', is an object detection algorithm that divides images into a grid system. Each cell in the grid is responsible for detecting objects within itself.
-YOLO is one of the most famous object detection algorithms due to its speed and accuracy.
+- YOLOv5: YOLO an acronym for 'You only look once, is an object detection algorithm that divides images into a grid system. 
+Each cell in the grid is responsible for detecting objects within itself. YOLO is one of the most famous object detection algorithms due to its speed and accuracy.
 
 Link for more detail: https://docs.ultralytics.com/ , https://github.com/ultralytics/yolov5 , https://pypi.org/project/yolov5/
 
@@ -50,7 +50,7 @@ Our team do Image augmentation with roboflow (due to time limitation, we set cri
      
 Step of roboflow for One Piece Character Detection Project
 1. Upload photo to roboflow
-2. Label One Piece Character in all photo.
+2. Label One Piece Character in all photos.
 3. Image preprocessing & Image augmentation
 4. Train.
 5. Deploy.
@@ -62,10 +62,10 @@ Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-t
 
 # Our project in roboflow:
 - Project Link: https://app.roboflow.com/dl-yjboe/dads7202_hw2
-- Total image = 1182 picture (Number of photo for each character shown below. Some picture have multi-character)
-- Number of photo after image augmentation = 11232
+- Total image = 1182 pictures (Number of photos for each character shown below. Some pictures have multi-character)
+- Number of photos after image augmentation = 11232
 - Train-Test Split = 70 : 20 : 10 --> After Image augmentation, Train : Validation : Test : 87% : 8% : 5%
-- Other setting shown in below
+- Other settings are shown below
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Number%20of%20character.jpg"> </span>
@@ -74,12 +74,12 @@ Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-t
 
 
 # roboflow's outcome:
-- mAP for Train / Validation / Test of all charactor = 71% / 68% / 70%
+- mAP for Train / Validation /Test of all character  = 71% / 68% / 70%
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20score.png"> </span>
 
-However, roboflow have some limitation about tuning. Next step, team will use jupyter in colab to adjust hyperparameter.
+However, roboflow have tuning limitation. Next step, team will use jupyter in colab to adjust hyperparameter.
 
 ---------------------------------------------------
 
@@ -89,10 +89,10 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 - 6 Comparison base on batch-size = 16 and 100 epochs (default)
    - Yolov5l - Weight False Freeze False (unfreeze layer + No update weight via pretrain step)
    - Yolov5l - Weight True Freeze False (unfreeze layer + Allow to update weight via pretrain step)
-   - Yolov5l - Weight False Freeze True (Freeze all layer (except output layer) + No update weight via pretrain step)
-   - Yolov5l - Weight True Freeze True (Freeze all layer (except output layer) + Allow to update weight via pretrain step)
+   - Yolov5l - Weight False Freeze True (Freeze all layers (except output layer) + No update weight via pretrain step)
+   - Yolov5l - Weight True Freeze True (Freeze all layers (except output layer) + Allow to update weight via pretrain step)
    - Yolov5l - Weight True Freeze 10 (Freeze backbone = 10 layer + No update weight via pretrain step)
-   - Yolov5s - Weight True Freeze True (Freeze all layer (except output layer) + Allow to update weight via pretrain step + Change to Yolov5s) (ยังไม่เสร็จ)
+   - Yolov5s - Weight True Freeze True (Freeze all layers (except output layer) + Allow to update weight via pretrain step + Change to Yolov5s) (ยังไม่เสร็จ)
 
 # mAP@0.5 score from Jupyter-colab:
    - Yolov5l - Weight False Freeze False = 0.709
@@ -125,7 +125,7 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 # Jupyter-colab's outcome:
 - The best score model = Yolov5l - Weight True Freeze False, 0.787
-- However, running time is high. The running time of each model shown below
+- However, running time is high. The running time of each model is shown below
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Running%20time.png"> </span>
@@ -139,16 +139,16 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 
 # Next step:
-- Add number of photo
-- Use more feature of image augmentation (Cutout, Grayscale, ...)
+- Add number of photos
+- Use more features of image augmentation (Cutout, Grayscale, ...)
 - Create standard of Labelling 
-- Comparison to others version of YoloV5 (YoloV5m,  YoloV5x, ...)
+- Comparison to other versions of YoloV5 (YoloV5m,  YoloV5x, ...)
 -
 ---------------------------------------------------
 
 # Reference:
-- Yolov5: https://](https://github.com/ultralytics/yolov5
-- C3 model: https://](https://arxiv.org/abs/1812.04920
+- Yolov5: https://github.com/ultralytics/yolov5
+- C3 model: https://arxiv.org/abs/1812.04920
 
 
 ---------------------------------------------------
