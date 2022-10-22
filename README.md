@@ -92,15 +92,11 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 # Jupyter-colab's outcome:
 - mAP@0.5 score
    - Yolov5l - Weight False Freeze False = 0.709
-
 <p align="center" width="100%">
     <img width="80%" src="pic/yolov5l_W_False_F_False_PR_curve.png"> </span>
-
    - Yolov5l - Weight True Freeze False = 0.787
-
 <p align="center" width="100%">
     <img width="80%" src="pic/yolov5l_W_True_F_False_PR_curve.png"> </span>
-
    - Yolov5l - Weight False Freeze True = 0.002
 
 <p align="center" width="100%">
