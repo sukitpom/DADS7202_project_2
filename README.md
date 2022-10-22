@@ -59,6 +59,7 @@ Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-t
 - Project Link: https://app.roboflow.com/dl-yjboe/dads7202_hw2
 - Total image = 1182 picture (Number of photo for each character shown below. Some picture have multi-character)
 - Number of photo after image augmentation = 11232
+- Train-Test Split = 70 : 20 : 10 --> After Image augmentation, Train : Validation : Test : 87% : 8% : 5%
 - Other setting shown in below
 
 <p align="center" width="100%">
@@ -79,111 +80,48 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 # Our project in  jupyter-colab
 - Project Link: https://colab.research.google.com/drive/1hfHihyPVFt18axpft3brB-uG-jAQ9OoM?usp=sharing#scrollTo=ii8qC1HDUzZ6
+มีของ yolov5s จะแยกหรือร่วม colab
 - 6 Comparison base on batch-size = 16 and 100 epochs (default)
-   - Yolov5l - Weight False Freeze False 
-   - Yolov5l - Weight True Freeze False
-   - Yolov5l - Weight False Freeze True
-   - Yolov5l - Weight True Freeze True 
-   - Yolov5l - Weight True Freeze 10 
+   - Yolov5l - Weight False Freeze False (unfreeze layer + No update weight via pretrain step)
+   - Yolov5l - Weight True Freeze False (unfreeze layer + Allow to update weight via pretrain step)
+   - Yolov5l - Weight False Freeze True (Freeze all layer (except output layer) + No update weight via pretrain step)
+   - Yolov5l - Weight True Freeze True (Freeze all layer (except output layer) + Allow to update weight via pretrain step)
+   - Yolov5l - Weight True Freeze 10 (Freeze backbone = 10 layer + No update weight via pretrain step)
+   - Yolov5s - Weight True Freeze True (Freeze all layer (except output layer) + Allow to update weight via pretrain step + Change to Yolov5s) (ยังไม่เสร็จ)
+
+# jupyter-colab's outcome:
+   - Yolov5l - Weight False Freeze False = 0.709
+
+<p align="center" width="100%">
+    <img width="80%" src="pic/yolov5l_W_False_F_False_PR_curve.png"> </span>
+
+   - Yolov5l - Weight True Freeze False = 0.787
+
+<p align="center" width="100%">
+    <img width="80%" src="pic/yolov5l_W_True_F_False_PR_curve.png"> </span>
+
+   - Yolov5l - Weight False Freeze True = 0.002
+
+<p align="center" width="100%">
+    <img width="80%" src="pic/yolov5l_W_False_F_True_PR_curve.png"> </span>
+
+   - Yolov5l - Weight True Freeze True = 0.066
+
+<p align="center" width="100%">
+    <img width="80%" src="pic/yolov5l_W_True_F_True_PR_curve.png"> </span>
+
+   - Yolov5l - Weight True Freeze 10 = 0.673 
+
+<p align="center" width="100%">
+    <img width="80%" src="pic/yolov5l_W_True_F10_True_PR_curve.png"> </span>
+
    - Yolov5s - Weight True Freeze True (ยังไม่เสร็จ)
-- Number of photo after image augmentation = 11232
-- Other setting shown in below
 
-
-
-Respone type vs K-MEAN result 
-
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/5.%20KMEAN%20vs%20Respone.JPG)
-
-Respone type vs key parameter
-
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/6.JPG)
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/7.JPG)
-
-- Create new parameter to use in prediction model that is shown in following
-
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/3.%20Parameter.JPG)
-
-- Feature selection
-                             
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/4.%20Feature%20selection.JPG)
-
-- Highest score
-
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/8.JPG)
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/9.JPG)
-
-- Conclusion
-
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/11.jpg)
-
-# Capybarista Group <p> *Object Detection One Piece* </p>
-
-# 1. Overview 
-Data  จำนวน 1182 รูป ประกอบก้วย 9 คลาสดังนี้
-- Brook         92  รูป
-- Chopper       204 รูป
-- Franky        175 รูป
-- Luffy         364 รูป
-- Nami          205 รูป
-- Robin         217 รูป
-- Sanji         171 รูป
-- Usopp         271 รูป
-- Zoro          263 รูป
-  
-แบ่งเป็น Train:Test:Split   70 : 20 : 10
-
-กระบวนการ Create Dataset ด้วย Roboflow มีดังนี้
-1. PREPROCESSING
-    - Auto-Orient: Applied
-    - Resize: Stretch to 416xv416
-    - Tile: 2 rows x 2 columns
-2. AUGMENTATIONS
-    - Outputs per training example: 3
-    - Flip: Horizontal, Vertical
-    - Crop: 0% Minimum Zoom, 20% Maximum Zoom
-    - Rotation: Between -31° and +31°
-    - Brightness: Between -25% and +25%
-    - Blur: Up to 2px
-  
-รูปภาพที่ผ่านการ AUGMENTATIONS มีจำนวนทั้งสิ้น 11232 รูป แบ่งได้เป็น
-1. Train      จำนวน 9756 รูป ( 87% )
-2. Validation จำนวน 984  รูป (  8% )
-3. Test       จำนวน 528  รูป (  5% ) 
-
-Model ที่ใช้ในการทดสอบคือ Yolov5s และ Yolov5l
-แบ่งการทดสอบดังนี้
-1. Yolov5l unfreeze model และให้ Model ทำการปรับ Weight เอง
-2. Yolov5l unfreeze model และใช้ weight ที่ผ่าน pretrain (yolov5l.pt)
-3. Yolov5l Freeze   model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain (yolov5l.pt)
-4. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และให้ Model ทำการปรับ Weight เอง
-5. Yolov5l Freeze  10 layer แรกและใช้ weight ที่ผ่าน pretrain  
-6. Yolov5s Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain  (yolov5s.pt)
 
 
 # 2. What is Yolov5?
 The object detection method YOLO, which stands for "You Only Look Once," divide images into a grid structure. In the grid, each cell is in charge of finding objects within of it. Due to its accuracy and speed, YOLO is one of the most well-known object detection algorithms.
 
-# 3. Code Detail
-
-# 4. Result
-## PR Curve
-1. Yolov5l unfreeze และไม่ใช้ weight ที่ผ่าน pretrain <br>
-<img src="pic/yolov5l_W_False_F_False_PR_curve.png" alt="drawing" align ="center" width ="400">
-
-2. Yolov5l unfreeze model และใช้ weight ที่ผ่าน pretrain  <br>
-<img src="pic/yolov5l_W_True_F_False_PR_curve.png" alt="drawing" align ="center" width ="400">
-
-3. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และใช้ weight ที่ผ่าน pretrain  
-<img src="pic/yolov5l_W_True_F_True_PR_curve.png" alt="drawing" align ="center" width ="400">
-
-4. Yolov5l Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inference และไม่ใช้ weight ที่ผ่าน pretrain <br>
-<img src="pic/yolov5l_W_False_F_True_PR_curve.png" alt="drawing" align ="center" width ="400">   
-
-5. Yolov5l Freeze  backbone 10 layer แรกและไม่ใช้ weight ที่ผ่าน pretrain  
-<img src="pic/yolov5l_W_True_F10_True_PR_curve.png" alt="drawing" align ="center" width ="400">   
-
-6. Yolov5s Freeze  model ทั้งหมดยกเว้น Layer สุดท้ายสำหรับใช้ Inferenceและใช้ weight ที่ผ่าน pretrain 
 
 
 
