@@ -1,5 +1,6 @@
 # <p align="center"> One Piece Character Detection </p>
 
+![alt](https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg)
 by Capybarista Team
 
 # Summary:
