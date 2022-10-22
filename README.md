@@ -7,6 +7,7 @@ This is *red*{: style="color: red"}.
 This is <span style="color: red">written in red</span>.
 <span style="color:blue">some *blue* text</span>.
 <span style="color:red">some **This is Red Bold.** text</span>
+Hi here is some text <span style="color: red">this is red</span>.
 Some Markdown text with <span style="color:blue">some *blue* text</span>.
 <b style='color:red'>red words</b>.
 <p align="center" width="100%">
