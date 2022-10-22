@@ -1,6 +1,6 @@
 # <p align="center"> One Piece Character Detection </p>
 
-by Capybarista Team 
+<font color="grey">by Capybarista Team</font> 
 <p align="center" width="100%">
     <img width="75%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg"> </span>
 
@@ -20,10 +20,7 @@ by Capybarista Team
 - The Best Model (Highest score) = Yolov5l - Weight True Freeze False (Unfreeze Model + Adjust weight from pre-train result)
 - Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10
 
-RFM model and imbalance data
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/1.%20output.JPG)
-
-# Step of work:
+# Introduction:
 - 1. Raw data: Following figure is example of Raw Data
 
 ![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/2.%20Raw%20data.jpg)
