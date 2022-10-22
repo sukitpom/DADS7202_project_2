@@ -21,11 +21,11 @@ by Capybarista Team
 - Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10
 
 # Introduction:
-- 1. Object detection: Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. 
+- Object detection: Object detection is a computer vision technique that allows us to identify and locate objects in an image or video. 
 With this kind of identification and localization, object detection can be used to count objects in a scene and determine and track their precise locations, all while accurately labeling them.
 The comparison between image classification, object detection and instance segmentation shown in below.
 
-![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/2.%20Raw%20data.jpg)
+![alt](https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Picture1.png)
 from: Standford University 2016 winter lectures CS231n Fei-Fei Li & Andrej Karpathy & Justin Johnson
 
 - 2. Highlight Data Profiling
