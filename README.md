@@ -78,7 +78,7 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 ---------------------------------------------------
 
-# Our project in  jupyter-colab
+# Our project in jupyter-colab:
 - Project Link: https://colab.research.google.com/drive/1hfHihyPVFt18axpft3brB-uG-jAQ9OoM?usp=sharing#scrollTo=ii8qC1HDUzZ6
 มีของ yolov5s จะแยกหรือร่วม colab
 - 6 Comparison base on batch-size = 16 and 100 epochs (default)
@@ -118,7 +118,14 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
    - Yolov5s - Weight True Freeze True (ยังไม่เสร็จ)
 
 
-# :
+# Jupyter-colab's outcome:
+- The best score model = Yolov5l - Weight True Freeze False, 0.787
+- However, running time is high. The running time of each model shown below
+
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Running%20time.png"> </span>
+
+- Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10 --> Score drop ~15% but save time ~40% 
 
 
 ---------------------------------------------------
