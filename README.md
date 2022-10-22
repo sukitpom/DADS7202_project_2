@@ -3,6 +3,11 @@
 <p style='color:red'>by Capybarista Team</p>
 <p style='color:red'>This is some red text.</p>
 <font color="red">This is some text!</font>
+This is *red*{: style="color: red"}.
+This is <span style="color: red">written in red</span>.
+<span style="color:blue">some *blue* text</span>.
+<span style="color:red">some **This is Red Bold.** text</span>
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
 <b style='color:red'>red words</b>.
 <p align="center" width="100%">
     <img width="75%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg"> </span>
