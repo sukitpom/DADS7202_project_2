@@ -67,12 +67,13 @@ Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-t
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20setting.jpg"> </span>
 
 
-# roboflow's outcome: 1,962
+# roboflow's outcome:
 - mAP for Train / Validation / Test of all charactor = 71% / 68% / 70%
-- Observation: Usopp is lowest score --> Usopp have 2 version (wear mask/no mask) but our team label only 1 label (ยังไม่เสร็จ)
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20score.png"> </span>
+
+However, roboflow have some limitation about tuning. Next step, team will use jupyter in colab to adjust weight and freeze.
 
 
 
