@@ -52,8 +52,7 @@ Step of roboflow for One Piece Character Detection Project
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20step.png"> </span>
 
-Image source and detail of roboflow tutorial.
-visit: https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
+Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
 
 Respone type vs K-MEAN result 
 
