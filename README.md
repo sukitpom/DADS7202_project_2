@@ -30,6 +30,11 @@ The comparison between image classification, object detection and instance segme
 
 from: Standford University 2016 winter lectures CS231n Fei-Fei Li & Andrej Karpathy & Justin Johnson
 
+- YOLOv5: YOLO an acronym for 'You only look once', is an object detection algorithm that divides images into a grid system. Each cell in the grid is responsible for detecting objects within itself.
+YOLO is one of the most famous object detection algorithms due to its speed and accuracy.
+
+Link for more detail: https://docs.ultralytics.com/ , https://github.com/ultralytics/yolov5 , https://pypi.org/project/yolov5/
+
 - roboflow: Roboflow is a computer vision platform that allows users to build computer vision models faster and more accurately through the provision of better data collection, preprocessing, 
 and model training techniques. Roboflow allows users to upload custom datasets, draw annotations, modify image orientations, resize images, modify image contrast and perform data augmentation. 
 It can also be used to train models.
@@ -125,7 +130,7 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Running%20time.png"> </span>
 
-- Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10 --> Score drop ~15% but save time ~40% 
+- Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10 (Score drop ~15% but save time ~40%)
 
 
 ---------------------------------------------------
