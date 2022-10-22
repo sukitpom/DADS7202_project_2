@@ -1,6 +1,6 @@
 # <p align="center"> One Piece Character Detection </p>
 
-<font color="grey">by Capybarista Team</font> 
+<font color="red">by Capybarista Team</font> 
 <p align="center" width="100%">
     <img width="75%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg"> </span>
 
