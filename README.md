@@ -37,8 +37,9 @@ It can also be used to train models.
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow.jpg"> </span>
 
-    - Image augmentation is an efficacious technique when we don’t have an ample amount of data for training a deep learning model
-    - Our team do Image augmentation with roboflow (due to time limitation, we set criteria of image augmentation as default of roboflow). Following figure is image augmentation options in roboflow.
+  - Image augmentation is an efficacious technique when we don’t have an ample amount of data for training a deep learning model
+  - Our team do Image augmentation with roboflow (due to time limitation, we set criteria of image augmentation as default of roboflow). 
+      Following figure is image augmentation options in roboflow.
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/augmentation-options.png"> </span>
