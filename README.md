@@ -89,7 +89,8 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
    - Yolov5l - Weight True Freeze 10 (Freeze backbone = 10 layer + No update weight via pretrain step)
    - Yolov5s - Weight True Freeze True (Freeze all layer (except output layer) + Allow to update weight via pretrain step + Change to Yolov5s) (ยังไม่เสร็จ)
 
-# jupyter-colab's outcome:
+# Jupyter-colab's outcome:
+- mAP@0.5 score
    - Yolov5l - Weight False Freeze False = 0.709
 
 <p align="center" width="100%">
@@ -118,6 +119,15 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
    - Yolov5s - Weight True Freeze True (ยังไม่เสร็จ)
 
 
+# :
+
+
+---------------------------------------------------
+
+
+
+
+---------------------------------------------------
 
 # 2. What is Yolov5?
 The object detection method YOLO, which stands for "You Only Look Once," divide images into a grid structure. In the grid, each cell is in charge of finding objects within of it. Due to its accuracy and speed, YOLO is one of the most well-known object detection algorithms.
