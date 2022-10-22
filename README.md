@@ -6,10 +6,10 @@ by Capybarista Team
 
 
 
-# Summary:
+# Brief Result:
 
 - Model comparison with mAP@0.5 score and Running time
-   - RoboFlow (Default) - (0.7)
+   - roboflow (Default) - (0.7)
    - Yolov5l - Weight False Freeze False (0.709 / 5.36 hr)
    - Yolov5l - Weight True Freeze False (0.787 / 5.35 hr)
    - Yolov5l - Weight False Freeze True (0.002 / 2.42 hr)
@@ -30,7 +30,13 @@ The comparison between image classification, object detection and instance segme
 
 from: Standford University 2016 winter lectures CS231n Fei-Fei Li & Andrej Karpathy & Justin Johnson
 
-- 2. Highlight Data Profiling
+- roboflow: Roboflow is a computer vision platform that allows users to build computer vision models faster and more accurately through the provision of better data collection, preprocessing, 
+and model training techniques. Roboflow allows users to upload custom datasets, draw annotations, modify image orientations, resize images, modify image contrast and perform data augmentation. 
+It can also be used to train models.
+
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow.jpg"> </span>
+
 
 RFM model and imbalance data
 
