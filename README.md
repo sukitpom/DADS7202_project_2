@@ -44,7 +44,7 @@ It can also be used to train models.
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow.jpg"> </span>
      
 RFM model and imbalance data
-
+l;'
 ![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/10.jpg)
 
 
