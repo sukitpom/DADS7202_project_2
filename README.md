@@ -48,12 +48,26 @@ Step of roboflow for One Piece Character Detection Project
 2. Label One Piece Character in all photo.
 3. Image preprocessing & Image augmentation
 4. Train.
+5. Deploy.
 
 <p align="center" width="100%">
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20step.png"> </span>
 
 Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
 
+# Outcome:
+- mAP for Train / Validation / Test of all charactor = 71% / 68% / 70%
+
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20score.png"> </span>
+
+
+
+
+
+
+
+---------------------------------------------------
 Respone type vs K-MEAN result 
 
 ![alt](https://github.com/NattapongTH/NattapongTH-6310422089_BADS7105/blob/main/Homework%2008%20%E2%80%93%20Campaign%20Response%20Model/Photo/5.%20KMEAN%20vs%20Respone.JPG)
