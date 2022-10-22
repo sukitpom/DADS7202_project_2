@@ -55,8 +55,19 @@ Step of roboflow for One Piece Character Detection Project
 
 Image source and detail of roboflow tutorial --> https://blog.streamlit.io/how-to-use-roboflow-and-streamlit-to-visualize-object-detection-output/
 
-# roboflow's outcome:
-- Project Link: https://app.roboflow.com/dl-yjboe/dads7202_hw2/13
+# Our project in roboflow:
+- Project Link: https://app.roboflow.com/dl-yjboe/dads7202_hw2
+- Total image = 1182 picture (Number of photo for each character shown below. Some picture have multi-character)
+- Number of photo after image augmentation = 11232
+- Other setting shown in below
+
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Number%20of%20character.jpg"> </span>
+<p align="center" width="100%">
+    <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/roboflow%20setting.jpg"> </span>
+
+
+# roboflow's outcome: 1,962
 - mAP for Train / Validation / Test of all charactor = 71% / 68% / 70%
 - Observation: Usopp is lowest score --> Usopp have 2 version (wear mask/no mask) but our team label only 1 label (ยังไม่เสร็จ)
 
