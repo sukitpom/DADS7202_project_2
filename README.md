@@ -131,6 +131,17 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
     <img width="80%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Running%20time.png"> </span>
 
 - Alternative model (Balance between score and running time) = Yolov5l - Weight True Freeze 10 (Score drop ~15% but save time ~40%)
+- Observation: 
+   - Score: unfreeze layer model  > freeze layer model
+   - Score: allow to update weight model  > No update weight model
+   - Running time: unfreeze layer model  > freeze layer model
+   - Score: allow to update weight model  ~ No update weight model
+
+---------------------------------------------------
+
+# Reference:
+- Yolov5: https://](https://github.com/ultralytics/yolov5
+- C3 model: https://](https://arxiv.org/abs/1812.04920
 
 
 ---------------------------------------------------
@@ -138,34 +149,19 @@ However, roboflow have some limitation about tuning. Next step, team will use ju
 
 
 
----------------------------------------------------
-
-# 2. What is Yolov5?
-The object detection method YOLO, which stands for "You Only Look Once," divide images into a grid structure. In the grid, each cell is in charge of finding objects within of it. Due to its accuracy and speed, YOLO is one of the most well-known object detection algorithms.
 
 
-
-
-## mAP@0.5 ของโมเดลรูปแบบต่าง ๆ<br>
-<img src="pic/chart_PR_curve.png " alt="drawing" align ="center" width ="400">  <br> 
-
-โมเดลที่ให้ผลลัพธ์ดีที่สุด 3 อันดับแรกคือ โมเดลที่ 2 3 และ 5 มีค่า mAP@0.5 อยู่ที่ 0.787 0.709 และ 0.ตามลำดับ ส่วนโมเดล 3 และ 4 ที่มีการ Freeze ทั้งโมเดลจะให้ผลลัพธ์ที่ตรงข้ามกันอย่างสิ้นเชิง ซึ่งค่า mAP@0.5 ที่ได้ในแต่ละโมเดลมีความสอดคล้องกับ Precision-Recall Curve โดยโมเดลที่มีค่า mAP@0.5 มากเส้นโค้ง Precision-Recall ก็จะมาค่าเข้าใกล้ 1 เมื่อพิจารณา mAP@0.5 ในแต่ละ Epoch ของโมเดลที่ 1 2 และ 5 จะพบว่าค่า mAP@0.5 จะมีอัตราการเปลี่ยนแปลงที่ไม่แตกต่างจากเดิมมากนักตั้งแต่ Epoch 80 เป็นต้นไป ในส่วนของเวลาที่ใช้ในการประมวลผลของแต่ละโมเดลจะเป็นดังต่อไปนี้<br>
-
-<img src="pic/cls_log_loss.png " alt="drawing" align ="center" width ="400">  <br> 
-
-โมเดลที่ใช้เวลานานที่สุดคือ โมเดลที่ 1 2 5 ซึ่งใช้เวลา 5.355 5.353 และ 3.222 ชั่วโมงตามลำดับ
 
 
 # 5. Summary
-จากการทดลองทั้ง 6 โมเดลพบว่าโมเดลที่ให้ค่า mAP@0.5 ดีที่สุดคือ โมเดล 2 ที่ Unfreeze Model และใช้ Weight ที่ผ่าน Pre-train ซึ่งให้ผลลัพธ์ที่ดีกว่า โมเดล 1 ที่ Unfreeze Model และไม่ใช้ Weight ที่ผ่าน Pre-train ซึ่งทั้ง 2 โมเดลนี้ให้ค่า mAP@0.5 ที่แตกต่างกันมาก ในขณะที่ใช้เวลาในการ Train ไม่แตกต่างกันอย่างมีนัยสำคัญ แต่เมื่อพิจารณาโมเดลที่ 5 กับโมเดลที่ 2 พบว่าค่า mAP@0.5 ของโมเดล 5 ให้ผลลัพธ์ไม่ต่างอย่างมีนัยสำคัญกับโมเดลที่ 1 แต่กลับใช้เวลาในการ Train ที่น้อยกว่าโมเดลที่ 1 มาก ส่วนโมเดลที่ 3 และ 4 ที่มีการ Freeze ทั้งโมเดลยกเว้น Inference Layer จะให้ผลลัพธ์ที่ไม่เหมาะสม เนื่องการเป็นส่วนของ Head กับ Neck ที่เกี่ยวข้องกับการทำนายผลลัพธ์ ซึ่งไม่ใช่ส่วนของ Feature Extraction จึงทำให้โมเดลไม่มีการเปลี่ยนแปลง Back Propagation ในส่วนของการทำนายผลให้สอดคล้องกับ Dataset ชุดใหม่ 
+จากการทดลองทั้ง 6 โมเดลพบว่าโมเดลที่ให้ค่า mAP@0.5 ดีที่สุดคือ โมเดล 2 ที่ Unfreeze Model และใช้ Weight ที่ผ่าน Pre-train ซึ่งให้ผลลัพธ์ที่ดีกว่า โมเดล 1 ที่ Unfreeze Model และไม่ใช้ Weight ที่ผ่าน Pre-train 
+ซึ่งทั้ง 2 โมเดลนี้ให้ค่า mAP@0.5 ที่แตกต่างกันมาก ในขณะที่ใช้เวลาในการ Train ไม่แตกต่างกันอย่างมีนัยสำคัญ แต่เมื่อพิจารณาโมเดลที่ 5 กับโมเดลที่ 2 พบว่าค่า mAP@0.5 ของโมเดล 5 ให้ผลลัพธ์ไม่ต่างอย่างมีนัยสำคัญกับโมเดลที่ 1 
+แต่กลับใช้เวลาในการ Train ที่น้อยกว่าโมเดลที่ 1 มาก ส่วนโมเดลที่ 3 และ 4 ที่มีการ Freeze ทั้งโมเดลยกเว้น Inference Layer จะให้ผลลัพธ์ที่ไม่เหมาะสม เนื่องการเป็นส่วนของ Head กับ Neck ที่เกี่ยวข้องกับการทำนายผลลัพธ์ 
+ซึ่งไม่ใช่ส่วนของ Feature Extraction จึงทำให้โมเดลไม่มีการเปลี่ยนแปลง Back Propagation ในส่วนของการทำนายผลให้สอดคล้องกับ Dataset ชุดใหม่ 
 
 # 6. Future Work
 - ทำการ unfreeze ในส่วนของ Head และ Neck ตามลำดับเพื่อเปรียบเทียบผลลัพธ์กับการ unfreez พร้อมกัน
 - เปรียบเทียบผลลัพธ์ของโมเดลที่ 1 2 5 กับ yoloV5 ที่เป็น verion s m x ว่าผลลัพธ์จะยังเป็นเหมือนเดิมเหรือไม่
 - เพิ่ม Dataset เพื่อทดสอบดูว่าความแม่นยำเพิ่มขึ้นหรือไม่ 
 
-# Reference
 
-[Yolov5]([https://](https://github.com/ultralytics/yolov5))
-
-[C3 model ]([https://](https://arxiv.org/abs/1812.04920))
