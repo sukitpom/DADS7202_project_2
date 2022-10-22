@@ -1,7 +1,7 @@
 # <p align="center"> One Piece Character Detection </p>
-
-<img src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg" alt="drawing" align ="center" width ="400">
-by Capybarista Team
+<p align="center" width="75%">
+    <img width="33%" src="https://github.com/NattapongTH/DADS7202_project_2/blob/main/pic/Header.jpg"> 
+<span style="color:grey"> by Capybarista Team </span>
 
 # Summary:
 
